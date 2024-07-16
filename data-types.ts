@@ -1,5 +1,8 @@
+import { addition   } from "./functions";
+
+
 // STRING
-const a = "I";
+const a = 'Gdd';
 const b = "am";
 const c = "happy";
 const abc = a+" "+b+" "+c;
@@ -33,7 +36,7 @@ console.log({
 
 
 // ARRAY (an ITTERABLE)
-const arr = [2, 2, 2, 2, "Obinna", "Nigeria", [9, "ten", [78]]];
+const arr: any[] = [2, 2, 2, 2, "Obinna", "Nigeria", [9, "ten", [78]]];
 const shoppingListMen = ["boxers", "singlets", "data", "ties", "pants", "shoes", "mummy's shoes"];
 const shoppingListLadies = ["bags", "ear rings", "shoes", "perfume", "make-up box"];
 
@@ -76,3 +79,23 @@ const contact_details = {
 
  console.log(contact_details.email); // contact_details["email"]
  console.log(contact_details["phoneNo"]); // contact_details.phoneNo
+
+ // CUSTOM TYPES
+
+ type Human = {
+    name: string;
+    age: number;
+    senses: Array<string>; // string[]
+    siblings: string[] // Array<string>
+ }
+
+ const obi: Human = {
+    name: "Obinna",
+    age: 34,
+    senses: [],
+    siblings: []
+ }
+
+ console.log(obi)
+
+ console.log(addition(45, 4, 7))

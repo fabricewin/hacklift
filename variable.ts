@@ -5,6 +5,6 @@ console.log(myName2)
 
 console.log(".............CONST.........")
 const myName = "Fabrice";
-myName ="Obed";
+myName2 ="Obed";
 console.log(myName)
 
