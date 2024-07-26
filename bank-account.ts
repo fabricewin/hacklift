@@ -10,7 +10,7 @@ export enum AccountStatus {
 }
 
 export type Transaction = {
-    trasactionType: TransactionType // The type of transaction, deposit or withdrawal
+    transactionType: TransactionType // The type of transaction, deposit or withdrawal
     amount: number
     performedBy: string // who deposited or withdrew the money
     date: Date // the date of the transaction
@@ -46,7 +46,7 @@ export class BankAccount {
         this.lastName = lastName
         this.address = address
         this.accountNumber = `${this.generateAccountNumber()}`
-        this.balance = 7000
+        this.balance = 0
         this.history = []
         this.status = AccountStatus.ACTIVE
     }
@@ -68,7 +68,7 @@ export class BankAccount {
         this.history.push({
             amount,
             performedBy: depositedBy,
-            trasactionType: TransactionType.DEPOSIT,
+            transactionType: TransactionType.DEPOSIT,
             date: new Date(),
         })
         console.log(`${amount} successfully deposited by ${depositedBy}!`)
@@ -108,7 +108,7 @@ export class BankAccount {
         this.history.push({
             amount,
             performedBy: withdrawnBy,
-            trasactionType: TransactionType.WITHDRAWAL,
+            transactionType: TransactionType.WITHDRAWAL,
             date: new Date(),
         })
         this.balance -= amount
